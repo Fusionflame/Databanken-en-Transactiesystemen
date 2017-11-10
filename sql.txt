@@ -1,0 +1,86 @@
+create table Club(
+	ClubID int not null unique,
+	Naam int,
+	primary key (ClubID)
+);
+create table Divisie(
+	DivisieID int not null,
+	Naam Varchar(25),
+	primary key (DivisieID),
+);
+
+create table Divisie_Team(
+	DivisieID int not null,
+	TeamID int not null,
+	constraint fk_DivisieID foreign key (DivisieID) 
+	reference Divisie (DivisieID)
+	on delete cascade,
+	constraint fk_Team foreign key (TeamID)
+	reference Team (TeamID)
+	on delete cascade
+);
+
+create table Team(
+	TeamID int not null,
+	Naam Varchar(25),
+	AantalGewonnen int
+);
+
+create table Team_Speler(
+	TeamID int not null,
+	SpelerID int not null,
+	constraint fk_Speler foreign key (SpelerID)
+	reference Team (SpelerID)
+	on delete cascade,
+	constraint fk_Team foreign key (TeamID)
+	reference Team (TeamID)
+	on delete cascade
+);
+
+create table Speler(
+	SpelerID int not null,
+	Naam varchar(50),
+	AantalGoals int,
+	EindeSchorsing DATE,
+	primary key (spelerID)
+
+create table spelerfout(
+	Geldboete int,
+	AantalDagenBuitenSpel int,
+	TeamID int not null,
+	FoutID int not null,
+	constraint fk_Speler foreign key (SpelerID)
+	reference Team (SpelerID)
+	on delete cascade,
+	constraint fk_Fout foreign key (FoutID)
+	reference Fout (FoutID)
+	on delete cascade
+);
+
+create table fout(
+	FoutID int not null,
+	Omschrijving varchar(100),
+	primary key (FoutID)
+);
+
+create table Team_Wedstrijd(
+	
+);
+
+create table Wedstrijd(
+	Datum Date;
+);
+
+create table Competitie(
+	CompetitieID int not null,
+	primary key (CompetitieID)
+);
+
+create table Wedstrijd_Scheidsrechter(
+);
+
+create table Scheidsrechter(
+	ScheidsrechterID int not null,
+	Naam Varchar(25),
+	primary key (ScheidsrechterID)
+);
