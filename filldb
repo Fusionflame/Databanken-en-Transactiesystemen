@@ -110,7 +110,7 @@ insert into hog14db.Team_Wedstrijd(TWTeamID, TWWedstrijdID) values
 
 insert into hog14db.Scheidsrechter(Naam,ScheidsrechterID) values
 	      ('Johan Verbist',1)
-	      ('Jérôme Efong Nzolo'2)
+	      ('Jerome Efong Nzolo',2)
 
 insert into hog14db.Wedstrijd_Scheidsrechter(WSWedstrijdID,WSScheidsrechterID) values
 	      (1,1)
