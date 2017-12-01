@@ -1,14 +1,14 @@
-insert into hog14db.Club (Naam, ClubID)
-	values ('FC Bayern', 1)
+insert into hog14db.Club (Naam, ClubID) values 
+	       ('FC Bayern', 1)
 	       ('Dortmund', 2)
 
-insert into hog14db.Divisie (Naam, DivisieID,DClubID)
-	values ('junioren FC Bayern',1,1)
+insert into hog14db.Divisie (Naam, DivisieID,DClubID) values
+	       ('junioren FC Bayern',1,1)
 	       ('beloften Dortmund',2,2)
 	       ('U17 FC Bayern',3,1)
 
-insert into hog14db.Speler (Naam, SpelerID, AantalGoals, Eindeschorsing)
-	values('Jan Jansen',1,7,20140805)
+insert into hog14db.Speler (Naam, SpelerID, AantalGoals, Eindeschorsing) values
+	      ('Jan Jansen',1,7,20140805)
 	      ('Bob Peeters',2,12,20160805)
 	      ('Lionel Messi',3,57,20171225)
 	      ('Luis Suarez',4,30,20170805)
@@ -25,12 +25,12 @@ insert into hog14db.Speler (Naam, SpelerID, AantalGoals, Eindeschorsing)
 	      ('David Alaba',15,0,20160609)
 	      ('Thiago Alcantara',16,0,20160609)
 
-insert into hog14db.Fout (ID,Omschrijving)
-	values(1,'Fysiek geweld')
+insert into hog14db.Fout (ID,Omschrijving) values
+	      (1,'Fysiek geweld')
 	      (2,'Valsspelen)
 
-insert into hog14db.Speler-Fout (Geldboete, AantalDagenBuitenSpel,SFSpelerID,SFFoutID)
-	values(300,49,2,1)
+insert into hog14db.Speler-Fout (Geldboete, AantalDagenBuitenSpel,SFSpelerID,SFFoutID) values
+	      (300,49,2,1)
 	      (0,7,1,2)
 	      (50,12,3,2)
 	      (750,29,3,1)
@@ -38,8 +38,8 @@ insert into hog14db.Speler-Fout (Geldboete, AantalDagenBuitenSpel,SFSpelerID,SFF
 	      (30,18,8,1)
 	      (79,21,8,2)      
 
-insert into hog14db.Team (Naam, TeamID, AantalGewonnen)
-	values('Fc de Kampioenen',1,0)
+insert into hog14db.Team (Naam, TeamID, AantalGewonnen) values
+	      ('Fc de Kampioenen',1,0)
 	      ('Kistal Palace',2,27)
 	      ('De Testers',3,7)
 	      ('Wing United',4,8)
@@ -47,8 +47,8 @@ insert into hog14db.Team (Naam, TeamID, AantalGewonnen)
 	      ('Nationale U17 FC Bayern',6,42)
 
 
-insert into hog14db.Team_Speler(TSSpelerID,TSTeamId)
-	values(1,1)
+insert into hog14db.Team_Speler(TSSpelerID,TSTeamId) values
+	      (1,1)
 	      (2,1)
 	      (3,1)
 	      (4,1)
@@ -66,8 +66,8 @@ insert into hog14db.Team_Speler(TSSpelerID,TSTeamId)
 	      (15,6)
 	      (16,6)
 
-insert into hog14db.Divisie-Team (DTDivisieID,DTTeamID)
-	values(1,1)
+insert into hog14db.Divisie-Team (DTDivisieID,DTTeamID) values
+	      (1,1)
 	      (2,3)
 	      (1,2)
 	      (2,1)
@@ -75,13 +75,13 @@ insert into hog14db.Divisie-Team (DTDivisieID,DTTeamID)
 	      (3,5)
 	      (3,6)	      
 
-insert into hog14db.Competitie (CompetitieID)
-	values(1)
+insert into hog14db.Competitie (CompetitieID) values
+	      (1)
 	      (2)
 	      (3)
 
-insert into hog14db.Wedstrijd (Datum, WCompetitieID,WedstrijdID)
-	values(20171010,1,1)
+insert into hog14db.Wedstrijd (Datum, WCompetitieID,WedstrijdID) values
+	      (20171010,1,1)
 	      (20170809,1,2)
 	      (20171010,2,3)
 	      (20170809,2,4)
@@ -90,8 +90,8 @@ insert into hog14db.Wedstrijd (Datum, WCompetitieID,WedstrijdID)
 	      (20160925,1,7)
 	      (20183017,2,8)
 
-insert into hog14db.Team-Wedstrijd(TWTeamID, TWWedstrijdID)
-	values(1,1)
+insert into hog14db.Team-Wedstrijd(TWTeamID, TWWedstrijdID) values
+	      (1,1)
 	      (2,1)
 	      (1,2)
 	      (2,2)
@@ -108,12 +108,12 @@ insert into hog14db.Team-Wedstrijd(TWTeamID, TWWedstrijdID)
 	      (2,8)
 	      (3,8)
 
-insert into hog14db.Scheidsrechter(Naam,ScheidsrechterID)
-	values('Johan Verbist',1)
+insert into hog14db.Scheidsrechter(Naam,ScheidsrechterID) values
+	      ('Johan Verbist',1)
 	      ('Jérôme Efong Nzolo'2)
 
-insert into hog14db.Wedstrijd-Scheidsrechter(WSWedstrijdID,WSScheidsrechterID)
-	values(1,1)
+insert into hog14db.Wedstrijd-Scheidsrechter(WSWedstrijdID,WSScheidsrechterID) values
+	      (1,1)
 	      (1,2)
 	      (2,1)
 	      (2,2)
