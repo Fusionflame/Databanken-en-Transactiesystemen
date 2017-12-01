@@ -1,0 +1,117 @@
+alter table hog14db.Club(
+	add constraint Club_Key
+		primary key (ClubID)
+)
+
+alter table hog14db.Speler(
+	add constraint Speler_Key
+		primary key (SpelerID)
+)
+
+alter table hog14db.Fout(
+	add constraint Fout_Key
+		primary key (FoutID)
+)
+
+alter table hog14db.Competitie(
+	add constraint Competie_Key
+		primary key (CompetitieID)
+)
+
+alter table hog14db.Scheidsrechter(
+	add constraint Scheidsrechter_Key
+		primary key (ScheidsrechterID)
+)
+
+alter table hog14db.Team(
+	add constraint Team_Key
+		primary key (TeamID)
+	add constraint Coach_REF
+		foreign key TCoachID
+		references Speler
+		on update cascade
+)
+
+alter table hog14db.Divisie(
+	add constraint Divisie_Key
+		primary key (DivisieID)
+	add constraint Club_REF 
+		foreign key DClubID 
+		references Club
+		on delete cascade
+		on update cascade
+)
+
+alter table hog14db.Wedstrijd(
+	add constraint Wedstrijd_Key
+		primary key (WedstrijdID)
+	add constraint COM_REF 
+		foreign key WCompetitieID 
+		references Competitie
+		on update cascade		
+)
+
+alter table hog14db.Divisie_Team(
+	add constraint Divisie_Team_Key
+		primary key (DTDivisieID, DTTeamID)
+	add constraint DIV_REF 
+		foreign key DTDivisieID 
+		references Divisie
+		on update cascade
+	add constraint TEA_REF 
+		foreign key DTTeamID 
+		references Team
+		on update cascade	
+)
+
+alter table hog14db.Team_Speler(
+	add constraint Team_Speler_Key
+		primary key (TSTeamID,TSSpelerID)
+	add constraint TEA_REF 
+		foreign key TSTeamID 
+		references Team
+		on update cascade
+	add constraint SPE_REF 
+		foreign key TSSpelerID 
+		references Speler
+		on update cascade
+)
+
+alter table hog14db.Speler_Fout(
+	add constraint Speler_Fout_Key
+		primary key (SFSpelerID,SFFoutID)
+	add constraint SPE_REF 
+		foreign key SFSpelerID 
+		references Speler
+		on update cascade
+	add constraint FOU_REF 
+		foreign key SFFoutID 
+		references Fout
+		on update cascade
+)
+
+alter table hog14db.Team_Wedstrijd(
+	add constraint Team_Wedstrijd_Key
+		primary key (TWWedstrijdID, TWTeamID)
+	add constraint WED_REF
+		foreign key TWWedstrijdID 
+		references Wedstrijd
+		on update cascade
+	add constraint TEA_REF
+		foreign key TWTeamID 
+		references Team
+		on update cascade
+)
+
+alter table hog14db.Wedstrijd_Scheidsrechter(
+	add constraint Wedstrijd_Scheidsrechter_key
+		primary key (WSWedstrijdID, WSScheidsrechterID)
+	add constraint WED_REF
+		foreign key WSWedstrijdID 
+		references Wedstrijd
+		on update cascade
+	add constraint SCH_REF
+		foreign key WSScheidsrechterID 
+		references Scheidsrechter
+		on update cascade
+)                                                             
