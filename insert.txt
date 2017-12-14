@@ -1,0 +1,62 @@
+insert into Club (Naam, ClubID)
+	values ('FC Bayern', 1),
+	       ('Dortmund', 2)
+
+insert into Divisie (Naam, DivisieID,ClubID)
+	values ('junioren FC Bayern',1,1),
+	       ('beloften Dortmund',2,2)
+
+insert into Speler (Naam, SpelerID, AantalGoals, Eindeschorsing)
+	values('Jan Jansen',1,7,20140805),
+	values('Bob Peeters',2,12,20160805),
+
+insert into Fout (ID,Omschrijving)
+	values(1,'Fysiek geweld'),
+	values(2,'Valsspelen)
+
+insert into Speler-Fout (Geldboete, AantalDagenBuitenSpel,SpelerID,FoutID)
+	values(300,49,2,1),
+	values(0,7,1,2)
+
+insert into Team (Naam, TeamID, AantalGewonnen)
+	values('Fc de Kampioen',1,0)
+	values('Kistal Palace',2,27)
+	values('De Testers',3,7)
+
+insert into Divisie-Team (DivisieID,TeamID)
+	values(1,1),
+	values(2,3),
+	values(1,2)
+
+insert into Competitie (CompetitieID)
+	values(1),
+	values(2),
+	values(3)
+
+insert into Wedstrijd (Datum, CompetitieID,WedstrijdID)
+	values(20171010,1,1),
+	values(20170809,1,2),
+	values(20171010,2,3),
+	values(20170809,2,4),
+	values(20171010,3,5),
+	values(20170809,3,6)
+
+insert into Team-Wedstrijd(TeamID, WedstrijdID)
+	values(1,1),
+	values(2,1),
+	values(1,2),
+	values(2,2),
+	values(3,3),
+	values(4,3),
+	values(4,4),
+	values(3,4)
+
+insert into Scheidsrechter(Naam,ScheidsrechterID)
+	values('Johan Verbist',1),
+	values('Jérôme Efong Nzolo'2)
+
+insert into Wedstrijd-Scheidsrechter(WedstrijdID,ScheidsrechterID)
+	values(1,1),
+	values(1,2),
+	values(2,1),
+	values(2,2)
